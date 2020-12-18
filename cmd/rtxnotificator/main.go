@@ -144,6 +144,15 @@ func poll(msgClient msgservice.SenderClient, stockClient apiservice.GpuStockClie
 		printf(LError, "Polling error: %v", err)
 	}
 
+	for _, s := range result {
+		// Send the alert string via the msg client.
+		if s.ShouldAlert() {
+			msg := s.AlertString()
+			res, _ := msgClient.Send(msg)
+
+			printf(LPoll, "Alert sent for %v result: %v \n\tSentContent: %v", s.Gpu, res, msg)
+		}
+	}
 
 	printf(LPoll, "Result from %v: %v", stockClient.Name(), result)
 }

@@ -1,6 +1,6 @@
 
 <p align="center"> 
-    <img width="250" height="250" src="https://github.com/marmiha/rtx-notificator/blob/main/assets/rtx-notificator-logo.png?raw=true">
+    <img width="250" height="250" src="https://github.com/marmiha/rtx-notificator/blob/main/resources/rtx-notificator-logo.png?raw=true">
 </p>
 
 ### Brief description
